@@ -6,8 +6,8 @@ Public Class frmPrincipal
     Dim lError As Integer
 
 
+
     Private Sub frmProduccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DataSet1.mgw10005' table. You can move, or remove it, as needed.
 
 
         Dim lidEmpresa As Integer
@@ -40,11 +40,15 @@ Public Class frmPrincipal
             cboRutaEmpresa.Items.Add(lRutaEmpresa.ToString)
             lError = fPosSiguienteEmpresa(lidEmpresa, lNombreEmpresa, lRutaEmpresa)
         End While
+
+
+
+
         'Omite la empresa predeterminada y selecciona la primera empresa
         cboEmpresa.Items.RemoveAt(0)
-        cboEmpresa.SelectedIndex = 0
+        'cboEmpresa.SelectedIndex = 0
         cboRutaEmpresa.Items.RemoveAt(0)
-        cboRutaEmpresa.SelectedIndex = 0
+        'cboRutaEmpresa.SelectedIndex = 0
 
 
 
@@ -55,7 +59,7 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAbrirEmpresa.Click
-        Dim lRuta
+
         cboRutaEmpresa.SelectedIndex = cboEmpresa.SelectedIndex
         lRuta = cboRutaEmpresa.SelectedItem
 
@@ -64,11 +68,18 @@ Public Class frmPrincipal
             MensajeError(lError)
             End
         End If
+
+        MsgBox(lRuta)
+
         Me.Hide()
         frmRecetas.Show()
 
 
     End Sub
 
+    Private Sub cboEmpresa_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboEmpresa.SelectedIndexChanged
 
+
+
+    End Sub
 End Class

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Receta" targetNamespace="http://tempuri.org/Receta.xsd" xmlns:mstns="http://tempuri.org/Receta.xsd" xmlns="http://tempuri.org/Receta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BDConexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDConexion (MySettings)" PropertyReference="ApplicationSettings.Recetas.My.MySettings.GlobalReference.Default.BDConexion" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mgw10005TableAdapter" GeneratorDataComponentClassName="mgw10005TableAdapter" Name="mgw10005" UserDataComponentName="mgw10005TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDConexion (MySettings)" DbObjectName="`c:\Compacw\Empresas\ADMINPAQ\ACME`.mgw10005" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `cnombrep01` FROM `mgw10005`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cnombrep01" DataSetColumn="cnombrep01" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Receta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Receta" msprop:Generator_UserDSName="Receta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="mgw10005" msprop:Generator_TableClassName="mgw10005DataTable" msprop:Generator_TableVarName="tablemgw10005" msprop:Generator_TablePropName="mgw10005" msprop:Generator_RowDeletingName="mgw10005RowDeleting" msprop:Generator_RowChangingName="mgw10005RowChanging" msprop:Generator_RowEvHandlerName="mgw10005RowChangeEventHandler" msprop:Generator_RowDeletedName="mgw10005RowDeleted" msprop:Generator_UserTableName="mgw10005" msprop:Generator_RowChangedName="mgw10005RowChanged" msprop:Generator_RowEvArgName="mgw10005RowChangeEvent" msprop:Generator_RowClassName="mgw10005Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cnombrep01" msprop:Generator_ColumnVarNameInTable="columncnombrep01" msprop:Generator_ColumnPropNameInRow="cnombrep01" msprop:Generator_ColumnPropNameInTable="cnombrep01Column" msprop:Generator_UserColumnName="cnombrep01">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
