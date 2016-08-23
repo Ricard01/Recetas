@@ -7,7 +7,6 @@ Public Class frmRecetas
     Private Sub frmRecetas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         conexionBD()
-
         comando.Connection = miConexion
         comando.CommandType = CommandType.Text
         comando.CommandText = "SELECT cidprodu01, cnombrep01  FROM mgw10005"
@@ -20,6 +19,7 @@ Public Class frmRecetas
                 While dataR.Read()
 
                     cboRecetas.Items.Add(dataR.GetString(1).ToString.Trim)
+
                 End While
             Else
                 MsgBox("Hubo un problema con la consulta")

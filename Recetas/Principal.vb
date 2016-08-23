@@ -1,20 +1,13 @@
 ﻿Imports System.IO
 Imports System.Text
 
-
 Public Class frmPrincipal
     Dim lError As Integer
 
-
-
     Private Sub frmProduccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
         Dim lidEmpresa As Integer
-
         Dim lNombreEmpresa As StringBuilder = New StringBuilder(61)
         Dim lRutaEmpresa As StringBuilder = New StringBuilder(61)
-
 
         ' Inicializar el SDK
         ' Directory.SetCurrentDirectory("C:\AdminPAQ_WIN\AdminPAQ\Binarios")
@@ -25,8 +18,8 @@ Public Class frmPrincipal
             End
         End If
         cboEmpresa.Items.Clear()
+        cboRutaEmpresa.Items.Clear()
         ' Ir a la primera empresa
-
 
         lError = fPosPrimerEmpresa(lidEmpresa, lNombreEmpresa, lRutaEmpresa)
 
@@ -41,18 +34,11 @@ Public Class frmPrincipal
             lError = fPosSiguienteEmpresa(lidEmpresa, lNombreEmpresa, lRutaEmpresa)
         End While
 
-
-
-
         'Omite la empresa predeterminada y selecciona la primera empresa
         cboEmpresa.Items.RemoveAt(0)
-        'cboEmpresa.SelectedIndex = 0
+        cboEmpresa.SelectedIndex = 0
         cboRutaEmpresa.Items.RemoveAt(0)
-        'cboRutaEmpresa.SelectedIndex = 0
-
-
-
-
+        cboRutaEmpresa.SelectedIndex = 0
         '  frmAbreEmpresa.Activa_Botones((True))
         ' frmAbreEmpresa.btnAbrirEmpresa.Enabled = False
 
@@ -69,17 +55,9 @@ Public Class frmPrincipal
             End
         End If
 
-        MsgBox(lRuta)
-
         Me.Hide()
         frmRecetas.Show()
 
-
     End Sub
 
-    Private Sub cboEmpresa_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboEmpresa.SelectedIndexChanged
-
-
-
-    End Sub
 End Class
